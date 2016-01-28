@@ -6,7 +6,7 @@ public class CubeColor : MonoBehaviour
 {
 
     public int selectedCube = -1;
-	List<CubeData> listOfCubeData;
+	public List<CubeData> listOfCubeData;
 	int numberOfCubes;
 
 	void Start(){
@@ -24,14 +24,7 @@ public class CubeColor : MonoBehaviour
 		}
 
 		ColorData cols = new ColorData();
-		
-		/*for (int i = 0; i < numberOfCubes; i++) {
-			GameObject o = GameObject.Find("Cube" + i);
-			if (!o){
-				Debug.LogError("Cannot find game object titled: Cube" + i);
-			}
-			o.GetComponent<Renderer>().material.color = cols.GetAColorToUse(i);
-		}*/
+
 		int iter = 0;
 		foreach (CubeData cd in listOfCubeData) {
 			cd.cube.GetComponent<Renderer>().material.color = cols.GetAColorToUse(iter % 5);
@@ -60,12 +53,6 @@ public class CubeColor : MonoBehaviour
 		}
 		listOfCubeData [selectedCube].cube.gameObject.transform.localScale = new Vector3 (1, 2, 1);
 	}
-
-    public float YOfCube(int cubeNumber)
-    {
-		GameObject ob = GameObject.Find("Cube" + selectedCube);
-        return ob.transform.localScale.y;
-    }
 }
 
 public class ColorData

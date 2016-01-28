@@ -1,0 +1,15 @@
+There are four scenes in the project, and they should all work without having to change any settings when switching between them. There should never be any errors.
+
+The scenes should each be able to do a few things:
+
+Every cube in the scene should get colored some color. The exact color isn't too important, you can change them if you want, but no cube should stay white.
+
+Pressing spacebar should cycle through cube selection (if there is more than one group, more than one cube might be selected at a time). If the last cube is selected when spacebar is pressed, the selection should loop back to the beginning or go back in the other direction.
+
+Pressing up or down should move the selected cube up or down in the y axis.
+
+If you have to change the scene to avoid an error, okay, but it would be better if you found a way to avoid errors by changing only code.
+
+
+Avoiding errors and getting everything working is the main priority, but keep in mind the coding standards posted on the test web page:
+http://495.azurewebsites.net/home/standards
